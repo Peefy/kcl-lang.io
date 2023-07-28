@@ -73,6 +73,5 @@ jobs:
           scoop bucket add KusionStack https://github.com/KusionStack/scoop-bucket.git
           scoop install KusionStack/kusion
           mkdir C:\Users\runneradmin\go
-          Get-Command cl
-          Get-Command kusion
+          gcm kusion
           kusion compile -w static/stack -o stdout
