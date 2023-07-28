@@ -74,4 +74,5 @@ jobs:
           scoop install KusionStack/kusion
           mkdir C:\Users\runneradmin\go
           where cl
+          del C:\Users\runneradmin\cl.exe
           kusion compile -w static/stack -o stdout
