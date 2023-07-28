@@ -1,8 +1,5 @@
 name: script-kusion
-on:
-  push:
-    branches: 
-     - main
+on: [push]
 jobs:
   check-kusion-script-install:
     strategy:
@@ -76,4 +73,5 @@ jobs:
           scoop bucket add KusionStack https://github.com/KusionStack/scoop-bucket.git
           scoop install KusionStack/kusion
           mkdir C:\Users\runneradmin\go
+          where cl
           kusion compile -w static/stack -o stdout
