@@ -74,5 +74,5 @@ jobs:
           scoop install KusionStack/kusion
           mkdir C:\Users\runneradmin\go
           gcm kusion
-          gcm cl
+          del C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe
           kusion compile -w static/stack -o stdout
