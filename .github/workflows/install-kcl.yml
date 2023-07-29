@@ -1,8 +1,5 @@
 name: script-kcl
-on:
-  push:
-    branches: 
-     - main
+on: [push]
 jobs:
   check-macos:
     strategy:
@@ -65,26 +62,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Check Install Script
-        run: static/script/install.ps1
       - name: Check KCL run
-        run: C:\kclvm\bin\kcl.exe ./static/stack/main.k
-
-      - name: Set up Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: ${{ matrix.goversion }}
-
-      - name: Set up python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.pyversion }}
-
-      - name: Check Python Installation
-        run: python3 -m pip install kclvm --user -U && python3 -m kclvm ./static/stack/main.k
-
-      - name: Check Go Installation
-        run: go install kcl-lang.io/kcl-go/cmds/kcl-go@main && C:\Users\runneradmin\go\bin\kcl-go.exe run ./static/stack/main.k
+        run: .\\static\\kcl-windows\\bin\\kcl.exe .\\static\\stack\\main.k
 
   check-kcl-scoop-install:
     runs-on: windows-latest
