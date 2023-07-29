@@ -63,7 +63,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Check KCL run
-        run: .\\static\\kcl-windows\\bin\\kcl.exe .\\static\\stack\\main.k
+        run: |
+          Remove-Item "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC"
+          .\\static\\kcl-windows\\bin\\kcl.exe .\\static\\stack\\main.k
 
   check-kcl-scoop-install:
     runs-on: windows-latest
