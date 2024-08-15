@@ -487,6 +487,23 @@ assert len(list) == 3  # True
 assert list[0] == 1  # True
 ```
 
+We can get or set values though index expressions `[]`
+
++ Get value from list
+
+```python
+data = [1, 2, 3]
+val = data[1]  # 2
+```
+
++ Set list values
+
+```python
+_data = [1, 2, 3]  # Note: we need to make _data immutable with the `_` prefix
+_data[1] = 0
+data = _data  # [1, 0, 3]
+```
+
 We can declare a list with list comprehension:
 
 ```python
@@ -594,6 +611,27 @@ a = {"one" = 1, "two" = 2, "three" = 3}
 b = {'one' = 1, 'two' = 2, 'three' = 3}
 assert a == b # True
 assert len(a) == 3 # True
+```
+
+We can get or set values though index expressions `[]` or select expressions `.`
+
++ Get value from dict
+
+```python
+config = {key = "value"}
+value1 = config.key  # "value"
+value2 = config["key"]  # "value"
+```
+
++ Set dict values
+
+```python
+_config = {key = "value"}  # Note: we need to make _config immutable with the `_` prefix
+_config.key = "new_value1"
+config1 = _config
+
+_config["key"] = "new_value2"
+config2 = _config
 ```
 
 We can ignore the comma `,` at the end of the line for writing dict key-value pairs in multiple lines:

@@ -74,10 +74,10 @@ powershell -Command "iwr -useb https://kcl-lang.io/script/uninstall-cli.ps1 | ie
 
 ```bash
 # 安装最新版本
-brew install kcl-lang/tap/kcl@0.8.0
+brew install kcl-lang/tap/kcl
 
-# 安装固定版本
-brew install kcl-lang/tap/kcl@x.y.z
+# 安装固定版本, e.g., kcl-lang/tap/kcl@0.10
+brew install kcl-lang/tap/kcl@x.y
 ```
 
 - 升级
@@ -173,10 +173,10 @@ powershell -Command "iwr -useb https://kcl-lang.io/script/install-kcl-lsp.ps1 | 
 
 ```bash
 # 安装最新版本
-brew install kcl-lang/tap/kcl-lsp@0.7.0
+brew install kcl-lang/tap/kcl-lsp
 
-# 安装固定版本
-brew install kcl-lang/tap/kcl-lsp@x.y.z
+# 安装固定版本, e.g., kcl-lang/tap/kcl-lsp@0.10
+brew install kcl-lang/tap/kcl-lsp@x.y
 ```
 
 - 升级

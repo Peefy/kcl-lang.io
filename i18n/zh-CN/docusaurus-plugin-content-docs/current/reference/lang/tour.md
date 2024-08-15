@@ -487,6 +487,23 @@ assert len(list) == 3  # True
 assert list[0] == 1  # True
 ```
 
+我们可以使用索引表达式 `[]` 从列表中获得元素或者修改元素的值
+
++ 从列表中获取元素
+
+```python
+data = [1, 2, 3]
+val = data[1]  # 2
+```
+
++ 修改列表中元素的值
+
+```python
+_data = [1, 2, 3]  # Note: we need to make _data immutable with the `_` prefix
+_data[1] = 0
+data = _data  # [1, 0, 3]
+```
+
 我们可以使用列表推导式构建列表：
 
 ```python
@@ -592,6 +609,29 @@ a = {"one" = 1, "two" = 2, "three" = 3}
 b = {'one' = 1, 'two' = 2, 'three' = 3}
 assert a == b # True
 assert len(a) == 3 # True
+```
+
+我们可以使用索引表达式 `[]` 或者 `.` 从字典中获得元素或者修改元素的值
+
++ 从字典中获取元素
+
++ Get value from dict
+
+```python
+config = {key = "value"}
+value1 = config.key  # "value"
+value2 = config["key"]  # "value"
+```
+
++ 修改字典中的元素
+
+```python
+_config = {key = "value"}  # Note: we need to make _config immutable with the `_` prefix
+_config.key = "new_value1"
+config1 = _config
+
+_config["key"] = "new_value2"
+config2 = _config
 ```
 
 在写多行的键-值时，可以省略每个键-值对行尾的逗号 `,`:
